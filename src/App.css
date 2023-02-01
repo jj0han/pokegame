@@ -1,38 +1,206 @@
 .App {
-  text-align: center;
+    height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Menu {
+    background-image: url(./images/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Menu>h1 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.ChoosePokemon {
+    display: flex;
+    width: 25%;
+    justify-content: space-around;
+    gap: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.ChoosePokemon>button {
+    border-radius: 7px;
+    backdrop-filter: blur(5px);
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.5);
+    flex-grow: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ChoosePokemon>button:hover {
+    z-index: 100;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.5);
+    transform: scale(1.5);
+}
+
+.ChoosePokemon>button>img {}
+
+.ChoosePokemon>button>p {
+    color: white;
+    font-size: 1.5rem;
+    padding: 5px;
+}
+
+.Display {
+    background-image: url("./images/pkm.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.Feed {
+    align-self: center;
+    flex-grow: 1;
+    font-size: 2.5rem;
+}
+
+.info {
+    display: flex;
+    padding: 20px;
+    max-height: 350px;
+}
+
+.Player-info {
+    justify-content: end;
+}
+
+.Sprite-container {
+    position: absolute;
+}
+
+.Sprite-container:nth-child(even) {
+    width: 300px;
+    height: 300px;
+    top: 20%;
+    right: 20%;
+}
+
+.Sprite-container:nth-child(odd) {
+    width: 400px;
+    height: 400px;
+    bottom: 20%;
+    left: 20%;
+}
+
+.Sprite-container>img {
+    width: 100%;
+}
+
+.CurrentPokemon {
+    background-color: antiquewhite;
+    border-radius: 30px 10px;
+    border: 7px solid rgb(3, 3, 66);
+    padding: 15px;
+    width: 400px;
+}
+
+.CurrentPokemon>p {
+    font-size: 2.2rem;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+}
+
+.Actions {
+    background-color: rgb(166, 228, 166);
+    border-top: 7px solid rgb(3, 3, 66);
+    display: flex;
+    justify-content: space-between;
+    height: 20%;
+}
+
+.Actions>div {
+    padding: 10px;
+    width: 30%;
+}
+
+.Actions>div>button {
+    cursor: pointer;
+    border: none;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    outline: none;
+    height: 50%;
+    width: 50%;
+}
+
+.Actions>div>button:nth-child(1) {
+    border-left: 7px solid rgb(3, 3, 66);
+    border-top: 7px solid rgb(3, 3, 66);
+    border-radius: 7px 0 0 0;
+}
+
+.Actions>div>button:nth-child(2) {
+    border-right: 7px solid rgb(3, 3, 66);
+    border-top: 7px solid rgb(3, 3, 66);
+    border-radius: 0 7px 0 0;
+}
+
+.Actions>div>button:nth-child(3) {
+    border-left: 7px solid rgb(3, 3, 66);
+    border-bottom: 7px solid rgb(3, 3, 66);
+    border-radius: 0 0 0 7px;
+}
+
+.Actions>div>button:nth-child(4) {
+    border-right: 7px solid rgb(3, 3, 66);
+    border-bottom: 7px solid rgb(3, 3, 66);
+    border-radius: 0 0 7px 0;
+}
+
+.Actions>div>button:hover {
+    background-color: antiquewhite;
+}
+
+.Painel {
+    background-color: rgb(68 68 68 / 55%);
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+}
+
+.Painel>div {
+    background-color: #f1f1f1cc;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 0px 20px 0px #000000a1;
+    border-radius: 10px;
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.Painel>div>p {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.Painel>div>button {
+    background-color: #f3f3f3;
+    width: 20%;
+    padding: 10px;
+    border-radius: 7px;
+    font-size: 1.5rem;
+    transition: .2s ease-in-out;
+}
+
+.Painel>div>button:hover {
+    transform: scale(1.4);
 }
