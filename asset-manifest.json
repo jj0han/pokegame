@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/pokegame/static/css/main.07d2ebc6.css",
+    "main.js": "/pokegame/static/js/main.7f23f17d.js",
+    "static/media/bg.jpg": "/pokegame/static/media/bg.addd51fa8ce56d5e014b.jpg",
+    "static/media/pkm.webp": "/pokegame/static/media/pkm.90ad98d80654caacc786.webp",
+    "index.html": "/pokegame/index.html",
+    "main.07d2ebc6.css.map": "/pokegame/static/css/main.07d2ebc6.css.map",
+    "main.7f23f17d.js.map": "/pokegame/static/js/main.7f23f17d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.07d2ebc6.css",
+    "static/js/main.7f23f17d.js"
+  ]
+}
